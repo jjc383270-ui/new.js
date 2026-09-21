@@ -216,7 +216,10 @@ document.querySelector('#title').innerHTML += "FES"
 document.querySelector(".title").style.fontSize = '16px'
 
 function changeTitleToRed() {
-    document.querySelector(".title").style.color = 'red'
+    document.querySelector("#title").style.color = 'red'
     console.log('clicked')
 }
 
+function toggleDarkMode() {
+    console.log(document.querySelector('body').classList);
+}
