@@ -79,8 +79,7 @@ welcomePersonToFES("Jason", "Jones");
 
 
 function fn() {
-    return 5
-console.log("my function")
+    return 5;
 }
 
 console.log(5);
@@ -91,14 +90,133 @@ function WelcomeToPersonFES(firstName , lastName) {
 WelcomeToPersonFES('Jason' , 'Jones');
 
 function fn() {
-    return 10
-    console.log('my function')
-} 
-    console.log(10);
+    return 10;
+}
+console.log(10);
 
     function sumOfTwoNumbers(num1, num2) {
-        return num1 / num2
+        return num1 + num2;
     }
 console.log(sumOfTwoNumbers(10, 10));
 
-    
+   let arr1 =[20, 30, 40, 50, 100]
+   
+   //[]
+   let newArr = arr1.filter((element) => element >= 50)
+
+    console.log(newArr)
+
+    /**
+     * Filter out all the 'FAIL' elements in an array
+     * 
+     * @examples
+     * ['A+', 'A', 'FAIL'] => ['A+', 'A']
+     * ['FAIL', 'Fail', 'B'] => ['B']
+     */
+
+    let grades = ['A', 'A', 'FAIL']
+
+    let goodGrades = grades.filter((element) => {
+        console.log(element)
+        if (element !== 'FAIL'){
+                return true;
+        }
+      })
+console.log(goodGrades)
+
+/*
+*
+let grades =  ['A+', 'A', 'FAIL']
+
+/ let goodGrades = []
+
+for (let i = 0; i < grades.length; ++i){
+
+if (grades[i] !== 'FAIL') {
+    goodGrades.push((grades[i]);
+}
+}
+*/
+console.log(goodGrades);
+
+let arr = [1, 4, 9, 16];
+
+let newArray = arr.map(element => console.log(element));
+
+
+console.log(newArray);
+
+
+
+
+
+
+
+
+   
+let dollars = [1, 5, 10, 3];
+
+//create new 'cents'arrray
+let cents = [100, 500, 1000, 300];
+
+
+//loop over every element in 'dollars'
+
+for  (let i = 0; i < dollars.length; ++i ) {
+cents.push(dollars[i] * 100);
+
+}
+
+let users = [
+{username: "Jason",
+email: "jjc383270@gmail.com",
+password: 'Services@22',
+subscriptionStatus: "VIP",
+discordId: "Jason Jones#0001",
+lessonsCompleted: [0, 1]
+},
+{
+username: "Mitri",
+email: "Mitri@frontendsimplified.com",
+password: 'mitri123',
+subscriptionStatus: "VIP",
+discordId: "Mitri#0001",
+lessonsCompleted: [0, 1, 2, 3,]
+}
+];
+
+function login(email, password) {
+    for (let i = 0; i < users.length; ++i) {
+        console.log(users[i]);
+    }
+}
+login("jjc383270@gmail.com", "Services@22");
+
+let count = 1
+
+while (count <= 100) {
+    console.log(count);
+    count = count + 1;
+}
+
+
+// first way of accessing an element
+console.log(document.querySelector('title'))
+
+// Second way of accessing an element
+console.log(document.getElementById('#title'))
+
+
+
+
+/// Change HTML
+document.querySelector('#title').innerHTML += "FES"
+
+// Change CSS
+document.querySelector(".title").style.fontSize = '16px'
+
+function changeTitleToRed() {
+    document.querySelector(".title").style.color = 'red'
+    console.log('clicked')
+}
+
